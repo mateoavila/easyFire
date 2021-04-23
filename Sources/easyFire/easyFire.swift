@@ -2,8 +2,7 @@
 public struct easyFire {
     var url =  "https://moneysaver-b9ab0-default-rtdb.firebaseio.com/"
     var virtualDict = [String:String]()
-    
-    
+        
     public init(){
     }
     
@@ -18,7 +17,7 @@ public struct easyFire {
     
     public mutating func add(key: String, value: String){
         virtualDict[key] = value
-        print("key: \(key) and value: \(value) have been added to the database")
+        print(" CHANGE key: \(key) and value: \(value) have been added to the database")
     }
     
     public mutating func update(key: String, value: String){
