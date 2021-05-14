@@ -16,8 +16,13 @@ public struct easyFire {
     }
     
     public mutating func add(key: String, value: String){
-        virtualDict[key] = value
-        print(" CHANGE key: \(key) and value: \(value) have been added to the database")
+        if (virtualDict[key] == nil) {
+            virtualDict[key] = value
+            print("key: \(key) and value: \(value) have been added to the database")
+        }else {
+            print("this key already exists, use update(key, value) to change")
+        }
+       
     }
     
     public mutating func update(key: String, value: String){
