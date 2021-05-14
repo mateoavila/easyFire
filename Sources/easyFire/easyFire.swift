@@ -12,13 +12,13 @@ public struct easyFire {
    
     public mutating func delete(key: String){
         virtualDict[key] = nil
-        print("KEY: \(key) has been deleted from the database")
+        print("deleted - KEY: \(key)")
     }
     
     public mutating func add(key: String, value: String){
         if (virtualDict[key] == nil) {
             virtualDict[key] = value
-            print("KEY: \(key) and VALUE: \(value) have been added to the database")
+            print("added - KEY: \(key) and VALUE: \(value) ")
         }else {
             print("UNABLE TO ADD:\(key) already exists as a key. Use update(key, value) to change")
         }
@@ -27,7 +27,7 @@ public struct easyFire {
     
     public mutating func update(key: String, value: String){
         virtualDict[key] = value
-        print("KEY: \(key) and VALUE: \(value) have been updated to the database")
+        print("updated KEY: \(key) and VALUE: \(value)")
 
     }
     
