@@ -1,8 +1,9 @@
-
 public struct easyFire {
     var url =  "https://moneysaver-b9ab0-default-rtdb.firebaseio.com/"
     var virtualDict = [String:String]()
         
+    //URLRequest.init(url: https:"//moneysaver-b9ab0-default-rtdb.firebaseio.com/")
+
     public init(){
     }
     
@@ -20,7 +21,7 @@ public struct easyFire {
             virtualDict[key] = value
             print("added - KEY: \(key) and VALUE: \(value) ")
         }else {
-            print("UNABLE TO ADD:\(key) already exists as a key. Use update(key, value) to change")
+            print("UNABLE TO ADD:\(key) already exists as a key")
         }
        
     }
